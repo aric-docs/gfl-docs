@@ -25,7 +25,7 @@ export default defineConfig({
       title: "GFL",
       description: "简化 GitHub Flow 工作流的强大命令行工具",
       themeConfig: {
-        logo: "/favicon.svg",
+        logo: "favicon.ico",
         lastUpdated: {
           text: "更新时间",
         },

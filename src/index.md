@@ -95,5 +95,5 @@ GFL 适用于任何使用 Git 和 GitHub 的项目，特别适合：
 ---
 
 <div style="text-align: center; margin-top: 3rem;">
-  <p style="font-size: 1.1em;">准备好开始了吗？查看 <a href="/guide/quick-start">快速开始指南</a> 了解详情！</p>
+  <p style="font-size: 1.1em;">准备好开始了吗？查看 [快速开始指南](/guide/quick-start) 了解详情！</p>
 </div>

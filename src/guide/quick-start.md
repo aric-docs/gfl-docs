@@ -150,6 +150,7 @@ git pull origin main
 | 命令 | 别名 | 说明 |
 |------|------|------|
 | `gfl init` | - | 初始化配置 |
+| `gfl config` | `c` | 查看配置 |
 | `gfl start` | `s` | 开始新功能 |
 | `gfl publish` | `p` | 发布分支 |
 | `gfl pr` | `rv` | 创建 PR |

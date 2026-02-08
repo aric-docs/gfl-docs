@@ -1,0 +1,8 @@
+debug: true                  # Enable debug mode for detailed output
+devBaseBranch: main           # Base branch for feature development
+productionBranch: main       # Main production branch
+featurePrefix: feature       # Prefix for feature branches
+fixPrefix: fix               # Prefix for bug fix branches
+hotfixPrefix: hotfix         # Prefix for hotfix branches
+# Branch case format: lower, upper, snake, camel, pascal, kebab, original
+branchCaseFormat: lower

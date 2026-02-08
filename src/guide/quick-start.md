@@ -7,12 +7,12 @@
 ### 从源码安装
 
 ```bash
-go install github.com/afeiship/gfl@latest
+go install github.com/aric-go/gfl@latest
 ```
 
 ### 下载二进制文件
 
-访问 [GitHub Releases](https://github.com/afeiship/gfl/releases) 下载适合你操作系统的二进制文件。
+访问 [GitHub Releases](https://github.com/aric-go/gfl/releases) 下载适合你操作系统的二进制文件。
 
 ### 验证安装
 
@@ -169,6 +169,6 @@ git pull origin main
 
 ## 遇到问题？
 
-- 在 GitHub 上提 [Issue](https://github.com/afeiship/gfl/issues)
+- 在 GitHub 上提 [Issue](https://github.com/aric-go/gfl/issues)
 - 使用 `gfl --help` 查看命令帮助
 - 启用调试模式：`gfl --debug command`

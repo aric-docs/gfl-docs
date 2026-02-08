@@ -144,7 +144,7 @@ export default defineConfig({
           },
         },
         socialLinks: [
-          { icon: "github", link: "https://github.com/afeiship/gfl" },
+          { icon: "github", link: "https://github.com/aric-go/gfl" },
         ],
         footer: {
           message: "基于 MIT 许可发布",

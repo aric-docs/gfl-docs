@@ -34,7 +34,7 @@ gfl info
 │ 🔗 跟踪分支: origin/feature/aric/user-auth                  │
 │ 📊 位置: 领先 3, 落后 1                                    │
 │ ✅ 工作目录: 有未提交的更改                                 │
-│ 🌐 远程仓库: git@github.com:afeiship/gfl.git               │
+│ 🌐 远程仓库: git@github.com:aric-go/gfl.git               │
 │                                                             │
 │ 👤 用户名: aric.zheng                                       │
 │ 📧 邮箱: aric.zheng@example.com                            │

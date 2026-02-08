@@ -14,7 +14,7 @@ hero:
       link: /commands/
     - theme: alt
       text: GitHub
-      link: https://github.com/afeiship/gfl
+      link: https://github.com/aric-go/gfl
 
 features:
   - icon: 🔧

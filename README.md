@@ -6,7 +6,7 @@ GFL (GitHub Flow CLI) 的官方文档站点。
 
 GFL 是一个强大的命令行工具，简化 GitHub Flow 工作流程。它提供了一组完整的命令来管理 Git 分支、创建 Pull Request、处理版本发布等操作。
 
-- [GitHub 仓库](https://github.com/afeiship/gfl)
+- [GitHub 仓库](https://github.com/aric-go/gfl)
 - [在线文档](https://afeiship.github.io/gfl-docs/)
 
 ## 本地开发

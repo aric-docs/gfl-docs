@@ -202,6 +202,36 @@ gfl s new-feature
 - 在不同环境中使用不同的配置
 - 测试新的配置而不修改现有文件
 
+### `GFL_LANG`
+
+设置 GFL CLI 的界面语言。
+
+```bash
+# 使用英文
+GFL_LANG=en-US gfl --help
+
+# 使用中文（默认）
+gfl --help
+# 或
+GFL_LANG=zh-CN gfl --help
+```
+
+支持的语言：
+- `en-US` - 英文
+- `zh-CN` - 中文简体（默认）
+
+**永久设置语言：**
+
+在 shell 配置文件中添加（如 `~/.zshrc` 或 `~/.bashrc`）：
+
+```bash
+# 使用英文界面
+export GFL_LANG=en-US
+
+# 然后重新加载配置
+source ~/.zshrc
+```
+
 ## 查看当前配置
 
 使用 `config` 命令查看当前有效的配置：

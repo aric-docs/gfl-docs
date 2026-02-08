@@ -2,7 +2,7 @@ import type { VitePWAOptions } from 'vite-plugin-pwa'
 
 export const pwaConfig: Partial<VitePWAOptions> = {
   registerType: 'autoUpdate',
-  includeAssets: ['favicon.svg'],
+  includeAssets: ['favicon.ico'],
   manifest: {
     name: 'GFL',
     short_name: 'SITE_TITLE',

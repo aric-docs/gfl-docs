@@ -10,7 +10,7 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", href: "favicon.ico" }],
   ],
   title: "GFL",
   description: "A powerful command-line tool that simplifies GitHub Flow workflows",

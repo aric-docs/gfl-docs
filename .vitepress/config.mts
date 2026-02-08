@@ -1,10 +1,7 @@
 import { defineConfig, loadEnv } from "vitepress";
-import { generateSidebar } from "vitepress-sidebar";
 import { VitePWA } from "vite-plugin-pwa";
 import { pwaConfig } from "./pwa.config";
 
-// 使用 VitePress 的 loadEnv 加载环境变量
-// mode: '' 会加载 .env 文件（只加载 VITE_ 开头的变量）
 const env = loadEnv("", process.cwd());
 
 export default defineConfig({
@@ -24,8 +21,8 @@ export default defineConfig({
     root: {
       label: "简体中文",
       lang: "zh-CN",
-      title: "SITE_TITLE",
-      description: "SITE_DESCRIPTION",
+      title: "GFL",
+      description: "简化 GitHub Flow 工作流的强大命令行工具",
       themeConfig: {
         logo: "/favicon.svg",
         lastUpdated: {
@@ -41,22 +38,91 @@ export default defineConfig({
         },
         nav: [
           { text: "首页", link: "/" },
-          { text: "组件", link: "/posts/components/index.md" },
-          { text: "Utils", link: "/posts/utils/index.md" },
-          { text: "规范", link: "/posts/standard/index.md" },
-          { text: "事故", link: "/posts/incidents/index.md" },
+          { text: "快速开始", link: "/guide/quick-start" },
+          { text: "命令参考", link: "/commands/" },
+          { text: "配置指南", link: "/guide/configuration" },
+          { text: "最佳实践", link: "/guide/best-practices" },
         ],
-        sidebar: generateSidebar({
-          documentRootPath: "src",
-          scanStartPath: "/posts",
-          collapsed: false,
-          capitalizeFirst: true,
-          useTitleFromFileHeading: true,
-          useTitleFromFrontmatter: true,
-          hyphenToSpace: true,
-          excludePattern: ["README.md"],
-          debugPrint: false,
-        }),
+        sidebar: {
+          "/guide/": [
+            {
+              text: "指南",
+              items: [
+                { text: "快速开始", link: "/guide/quick-start" },
+                { text: "配置指南", link: "/guide/configuration" },
+                { text: "最佳实践", link: "/guide/best-practices" },
+              ],
+            },
+          ],
+          "/commands/": [
+            {
+              text: "命令参考",
+              items: [
+                { text: "概述", link: "/commands/" },
+                {
+                  text: "核心命令",
+                  collapsed: false,
+                  items: [
+                    { text: "init - 初始化配置", link: "/commands/init" },
+                    { text: "start - 开始功能开发", link: "/commands/start" },
+                    { text: "publish - 发布分支", link: "/commands/publish" },
+                    { text: "pr - 创建 Pull Request", link: "/commands/pr" },
+                    { text: "checkout - 交互式分支切换", link: "/commands/checkout" },
+                  ],
+                },
+                {
+                  text: "修复命令",
+                  collapsed: false,
+                  items: [
+                    { text: "hotfix - 创建热修复分支", link: "/commands/hotfix" },
+                    { text: "bugfix - 创建缺陷修复分支", link: "/commands/bugfix" },
+                  ],
+                },
+                {
+                  text: "发布管理",
+                  collapsed: false,
+                  items: [
+                    { text: "release - 创建发布分支", link: "/commands/release" },
+                    { text: "tag - 创建版本标签", link: "/commands/tag" },
+                  ],
+                },
+                {
+                  text: "分支管理",
+                  collapsed: false,
+                  items: [
+                    { text: "sync - 同步远程仓库", link: "/commands/sync" },
+                    { text: "sweep - 清理分支", link: "/commands/sweep" },
+                    { text: "rebase - 变基分支", link: "/commands/rebase" },
+                    { text: "rename - 重命名分支", link: "/commands/rename" },
+                    { text: "copy - 复制分支", link: "/commands/copy" },
+                    { text: "restore - 恢复文件", link: "/commands/restore" },
+                    { text: "forward - 转发主分支", link: "/commands/forward" },
+                  ],
+                },
+                {
+                  text: "信息命令",
+                  collapsed: false,
+                  items: [
+                    { text: "info - 显示仓库信息", link: "/commands/info" },
+                    { text: "config - 查看配置", link: "/commands/config" },
+                  ],
+                },
+              ],
+            },
+          ],
+          "/": [
+            {
+              text: "开始使用",
+              items: [
+                { text: "简介", link: "/" },
+                { text: "快速开始", link: "/guide/quick-start" },
+                { text: "命令参考", link: "/commands/" },
+                { text: "配置指南", link: "/guide/configuration" },
+                { text: "最佳实践", link: "/guide/best-practices" },
+              ],
+            },
+          ],
+        },
         search: {
           provider: "local",
           options: {
@@ -78,76 +144,11 @@ export default defineConfig({
           },
         },
         socialLinks: [
-          { icon: "github", link: "https://github.com/afeiship" },
+          { icon: "github", link: "https://github.com/afeiship/gfl" },
         ],
         footer: {
           message: "基于 MIT 许可发布",
           copyright: "Copyright © 2019-present aric.zheng",
-        },
-      },
-    },
-    en: {
-      label: "English",
-      lang: "en",
-      title: "SITE_TITLE",
-      description: "SITE_DESCRIPTION",
-      themeConfig: {
-        logo: "/favicon.svg",
-        lastUpdated: {
-          text: "Last updated",
-        },
-        docFooter: {
-          prev: "Previous",
-          next: "Next",
-        },
-        outline: {
-          label: "On this page",
-          level: [2, 3],
-        },
-        nav: [
-          { text: "Home", link: "/en/" },
-          { text: "Components", link: "/en/posts/components/index.md" },
-          { text: "Utils", link: "/en/posts/utils/index.md" },
-          { text: "Standard", link: "/en/posts/standard/index.md" },
-          { text: "Incidents", link: "/en/posts/incidents/index.md" },
-        ],
-        sidebar: generateSidebar({
-          documentRootPath: "src/en",
-          scanStartPath: "/posts",
-          collapsed: false,
-          capitalizeFirst: true,
-          useTitleFromFileHeading: true,
-          useTitleFromFrontmatter: true,
-          hyphenToSpace: true,
-          excludePattern: ["README.md"],
-          debugPrint: false,
-        }),
-        search: {
-          provider: "local",
-          options: {
-            translations: {
-              button: {
-                buttonText: "Search",
-                buttonAriaLabel: "Search documentation",
-              },
-              modal: {
-                noResultsText: "No results for",
-                resetButtonTitle: "Reset search",
-                footer: {
-                  selectText: "to select",
-                  navigateText: "to navigate",
-                  closeText: "to close",
-                },
-              },
-            },
-          },
-        },
-        socialLinks: [
-          { icon: "github", link: "https://github.com/GITHUB_USERNAME" },
-        ],
-        footer: {
-          message: "Released under the MIT License.",
-          copyright: "Copyright © 2019-present AUTHOR_NAME",
         },
       },
     },

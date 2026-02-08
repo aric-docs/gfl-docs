@@ -8,6 +8,7 @@ export default defineConfig({
   srcDir: "./src",
   base: env.VITE_BASE_URL || "/",
   lastUpdated: true,
+  cleanUrls: true,
   head: [
     ["link", { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
   ],

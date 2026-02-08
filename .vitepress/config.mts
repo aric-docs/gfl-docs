@@ -10,10 +10,11 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   head: [
-    ["link", { rel: "icon", href: "favicon.ico" }],
+    ["link", { rel: "icon", href: "favicon.svg", type: "image/svg+xml" }],
   ],
   title: "GFL",
-  description: "A powerful command-line tool that simplifies GitHub Flow workflows",
+  description:
+    "A powerful command-line tool that simplifies GitHub Flow workflows",
   outDir: "./dist",
   vite: {
     plugins: [VitePWA(pwaConfig)],
@@ -25,7 +26,7 @@ export default defineConfig({
       title: "GFL",
       description: "简化 GitHub Flow 工作流的强大命令行工具",
       themeConfig: {
-        logo: "favicon.ico",
+        logo: "favicon.svg",
         lastUpdated: {
           text: "更新时间",
         },
@@ -68,22 +69,34 @@ export default defineConfig({
                     { text: "start - 开始功能开发", link: "/commands/start" },
                     { text: "publish - 发布分支", link: "/commands/publish" },
                     { text: "pr - 创建 Pull Request", link: "/commands/pr" },
-                    { text: "checkout - 交互式分支切换", link: "/commands/checkout" },
+                    {
+                      text: "checkout - 交互式分支切换",
+                      link: "/commands/checkout",
+                    },
                   ],
                 },
                 {
                   text: "修复命令",
                   collapsed: false,
                   items: [
-                    { text: "hotfix - 创建热修复分支", link: "/commands/hotfix" },
-                    { text: "bugfix - 创建缺陷修复分支", link: "/commands/bugfix" },
+                    {
+                      text: "hotfix - 创建热修复分支",
+                      link: "/commands/hotfix",
+                    },
+                    {
+                      text: "bugfix - 创建缺陷修复分支",
+                      link: "/commands/bugfix",
+                    },
                   ],
                 },
                 {
                   text: "发布管理",
                   collapsed: false,
                   items: [
-                    { text: "release - 创建发布分支", link: "/commands/release" },
+                    {
+                      text: "release - 创建发布分支",
+                      link: "/commands/release",
+                    },
                     { text: "tag - 创建版本标签", link: "/commands/tag" },
                   ],
                 },
